@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+componentDidMount(){
+
+}
+
   render() {
     return (
       <div className="App">
@@ -10,7 +14,7 @@ class App extends Component {
           <h1 className="App-title">Git HUb Search</h1>
         </header>
         <p className="App-intro">Search Git UserName </p>
-        <input />
+        <input type= "text" placeholder="Enter UserName "/>
         <button>Search user</button>
       </div>
     );
