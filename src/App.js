@@ -10,7 +10,7 @@ class App extends Component {
           <h1 className="App-title">Git HUb Search</h1>
         </header>
         <p className="App-intro">Search Git UserName </p>
-        <input >
+        <input />
         <button>Search user</button>
       </div>
     );
