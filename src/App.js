@@ -9,7 +9,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Git HUb Search</h1>
         </header>
-        <p className="App-intro">serch Git UserName </p>
+        <p className="App-intro">Search Git UserName </p>
+        <input >
+        <button>Search user</button>
       </div>
     );
   }
