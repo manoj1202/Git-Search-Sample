@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -8,7 +8,8 @@ class App extends Component {
   }
 
   getUserName= () => {
-    fetch('http://api.github.com/users')
+    const name= this.refs.name.value
+    fetch('http://api.github.com/users/${name}')
     .then(result =>result.json()) 
     .then(data => console.log(data))
 
@@ -21,7 +22,7 @@ class App extends Component {
           <h1 className="App-title">Git HUb Search</h1>
         </header>
         <p className="App-intro">Search Git UserName </p>
-        <input type= "text" placeholder="Enter UserName "/>
+        <input type= "text" placeholder="Enter UserName " ref='name'/>
         <button onClick={this.getUserName}>Search user</button>
         <br/>
         <p></p>
