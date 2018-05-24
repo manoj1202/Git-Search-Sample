@@ -4,6 +4,9 @@ import './App.css';
 
 class App extends Component {
 
+  getUserName= () => {
+    
+  }
 
   render() {
     return (
