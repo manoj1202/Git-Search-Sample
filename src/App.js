@@ -3,9 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state={
+    users:[]
+  }
 
   getUserName= () => {
-    
+    fetch('http://api.github.com/users')
+    .then(result =>result.json()) 
+    .then(data => console.log(data))
+
   }
 
   render() {
@@ -16,9 +22,9 @@ class App extends Component {
         </header>
         <p className="App-intro">Search Git UserName </p>
         <input type= "text" placeholder="Enter UserName "/>
-        <button>Search user</button>
+        <button onClick={this.getUserName}>Search user</button>
         <br/>
-        <p>{this.getUserName}</p>
+        <p></p>
       </div>
     );
   }
