@@ -4,9 +4,7 @@ import './App.css';
 
 class App extends Component {
   state={
-    users:{
-      input:''
-    }
+    users:[]
   }
 
   getUserName= () => {
@@ -16,8 +14,8 @@ class App extends Component {
     fetch(`http://api.github.com/users/${name}`)
     .then(response =>response.json()) 
     .then(data => {
-      this.setState((currentState) => {
-        users:{};
+      this.setState(() => {
+        console.log(data)
        })
       })
     }
@@ -26,7 +24,6 @@ class App extends Component {
   
 
   render() {
-    
     return (
       <div className="App">
         <header className="App-header">
@@ -36,7 +33,7 @@ class App extends Component {
         <input type= "text" placeholder="Enter UserName " ref='name' id="input"/>
         <button onClick={this.getUserName}>Search user</button>
         <br/>
-        <p>{this.state.users}</p>
+        
       </div>
     );
   }
