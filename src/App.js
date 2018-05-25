@@ -12,7 +12,7 @@ class App extends Component {
     {
     const name= this.refs.name.value;
     fetch(`http://api.github.com/users/${name}`)
-    .then(response =>response.json()) 
+    .then(result =>result.json()) 
     .then(data => {
       this.setState(() => {
         console.log(data)
