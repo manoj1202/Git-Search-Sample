@@ -29,7 +29,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Git HUb Search</h1>
         </header>
-        <p className="App-intro">Search Git UserName </p>
+        <p className="App-intro">Search Git User </p>
         <input type= "text" placeholder="Enter UserName " ref='name' id="input"/>
         <button onClick={this.getUser}>Search user</button>
         <br/>
