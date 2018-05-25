@@ -7,7 +7,7 @@ class App extends Component {
     users:[]
   }
 
-  getUserName= () => {
+  getUser= () => {
     if(document.getElementById('input').value !=='') 
     {
     const name= this.refs.name.value;
@@ -31,7 +31,7 @@ class App extends Component {
         </header>
         <p className="App-intro">Search Git UserName </p>
         <input type= "text" placeholder="Enter UserName " ref='name' id="input"/>
-        <button onClick={this.getUserName}>Search user</button>
+        <button onClick={this.getUser}>Search user</button>
         <br/>
         
       </div>
