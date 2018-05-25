@@ -22,15 +22,15 @@ class App extends Component {
       document.getElementById('input').value='';
     }
 // with dom event 
-componentDidMount(){
-  fetch('http://api.github.com/users')
-  .then(result =>result.json())
-  .then(data => {
-    this.setState(() =>{
-      user:[data]
-    })
-  })
-}
+// componentDidMount(){
+//   fetch('http://api.github.com/users')
+//   .then(result =>result.json())
+//   .then(data => {
+//     this.setState(() =>{
+//       user:[data]
+//     })
+//   })
+// }
 
   render() {
     return (
