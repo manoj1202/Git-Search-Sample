@@ -8,10 +8,14 @@ class App extends Component {
   }
 
   getUserName= () => {
-    const name= this.refs.name.value
-    fetch('http://api.github.com/users/${name}')
-    .then(result =>result.json()) 
-    .then(data => console.log(data))
+    const name= this.refs.name.value;
+    fetch(`http://api.github.com/users/${name}`)
+    .then(response =>response.json()) 
+    .then(data => {
+      this.setState(() => {
+        console.log(data)
+      })
+    })
 
   }
 
@@ -25,7 +29,7 @@ class App extends Component {
         <input type= "text" placeholder="Enter UserName " ref='name'/>
         <button onClick={this.getUserName}>Search user</button>
         <br/>
-        <p></p>
+        <p>{this.state.users}</p>
       </div>
     );
   }
