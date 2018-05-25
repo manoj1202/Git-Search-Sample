@@ -4,7 +4,9 @@ import './App.css';
 
 class App extends Component {
   state={
-    users:[]
+    users:{
+      input:''
+    }
   }
 
   getUserName= () => {
@@ -14,8 +16,8 @@ class App extends Component {
     fetch(`http://api.github.com/users/${name}`)
     .then(response =>response.json()) 
     .then(data => {
-      this.setState(() => {
-        users:[data];
+      this.setState((currentState) => {
+        users:{};
        })
       })
     }
@@ -24,6 +26,7 @@ class App extends Component {
   
 
   render() {
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -40,3 +43,4 @@ class App extends Component {
 }
 
 export default App;
+
