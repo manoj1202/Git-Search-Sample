@@ -25,7 +25,9 @@ class App extends Component {
 // componentDidMount(){
 //   fetch('http://api.github.com/users')
 //   .then(result =>result.json())
-//   .then(data => {
+//   
+// }
+// getuser = (data) => {
 //     this.setState(() =>{
 //       user:[data]
 //     })
