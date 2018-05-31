@@ -6,7 +6,7 @@ class App extends Component {
   state={
     users:{
       name:"",
-      avatar_url=""
+      avatar_url:""
     }
   }
 
