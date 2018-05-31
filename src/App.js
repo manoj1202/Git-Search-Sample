@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   state={
-    users:[]
+    users:{}
   }
 
   getUser= () => {
@@ -14,11 +14,16 @@ class App extends Component {
     fetch(`http://api.github.com/users/${name}`)
     .then(result =>result.json()) 
     .then(data => {
-      this.setState(() => {
-        console.log(data)
+      this.setState(() => ({
+         users:{
+          name : data.name,
+          avatar_url : data.avatar_url
+        }
+      }
+      ))
        })
-      })
-    }
+      }
+    
       document.getElementById('input').value='';
     }
 // with dom event 
@@ -44,6 +49,8 @@ class App extends Component {
         <input type= "text" placeholder="Enter UserName " ref='name' id="input"/>
         <button onClick={this.getUser}>Search user</button>
         <br/>
+        <p>{"Name  :"+ this.state.users.name}</p>
+        <p>{"avathar-url  :"+this.state.users.avatar_url}</p>
         
       </div>
     );
