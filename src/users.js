@@ -5,11 +5,13 @@ class Users extends Component{
         return(
             <div>
                 <p>User Details</p>
-                <p>{"Name  :" + this.props.users.name}</p>
-                <p>{"avathar-url  :" + this.props.users.avatar_url}</p>    
+                <p>{"Name  :"+ this.state.users.name}</p>
+                <p>{"avathar-url  :"+this.state.users.avatar_url}</p>    
             </div>
         );
     }
 }
 
 export default Users
+
+

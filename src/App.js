@@ -52,9 +52,7 @@ class App extends Component {
         <input type= "text" placeholder="Enter UserName " ref='name' id="input"/>
         <button onClick={this.getUser}>Search user</button>
         <br/>
-        <Users users={this.state.users}/>
-        
-        
+        <Users users={this.state.users}/> 
       </div>
     );
   }
