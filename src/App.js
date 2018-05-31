@@ -52,9 +52,8 @@ class App extends Component {
         <input type= "text" placeholder="Enter UserName " ref='name' id="input"/>
         <button onClick={this.getUser}>Search user</button>
         <br/>
-        <Users />
-        <p>{"Name  :"+ this.state.users.name}</p>
-        <p>{"avathar-url  :"+this.state.users.avatar_url}</p>
+        <Users users={this.state.users}/>
+        
         
       </div>
     );
