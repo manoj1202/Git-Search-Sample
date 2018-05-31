@@ -24,6 +24,9 @@ class App extends Component {
         }
       }
       ))
+      if (this.state.users.name === "null") {
+        this.state.users.name = "Unknown";
+      }
        })
       }
     
